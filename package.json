@@ -2,7 +2,7 @@
   "name": "reactexpresspolling",
   "version": "1.0.0",
   "description": "",
-  "main": "bundle.js",
+  "main": "app-server.js",
   "dependencies": {
     "babel-core": "^6.9.1",
     "babel-loader": "^6.2.4",
