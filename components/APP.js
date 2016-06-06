@@ -9,7 +9,7 @@ var APP = React.createClass({
 		this.socket.on('connect', this.connect);
 	},
 	connect(){
-		console.log('Connected ' + this.socket.id);
+		// console.log('Connected ' + this.socket.id);
 	},
 
 	render() {
