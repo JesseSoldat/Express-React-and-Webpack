@@ -1,6 +1,7 @@
 var React = require('react');
 var io = require('socket.io-client');
 var Header = require('./parts/Header');
+import { Link } from 'react-router';
 
 var APP = React.createClass({
 	getInitialState() {
@@ -31,6 +32,12 @@ var APP = React.createClass({
 		return (
 			<div>
 				<Header title={this.state.title} status={this.state.status} />
+				<ul role="nav">
+          			<li><Link to="/audience">Audience</Link></li>
+          			<li><Link to="/speaker">Repos</Link></li>
+          			<li><Link to="/board">Repos</Link></li>
+        		</ul>
+        		{this.props.children}
 			</div>
 			);
 	}
