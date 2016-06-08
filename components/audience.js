@@ -1,12 +1,12 @@
 var React = require('react');
+var Display = require('./parts/display');
 
 var Audience = React.createClass({
 	render() {
 
 		return (
 			<div>
-			<h1>Audience</h1>
-			<h4>{this.props.title}</h4>
+				<Display if={this.props.status === 'connected'}/>
 			</div>
 			);
 	}
