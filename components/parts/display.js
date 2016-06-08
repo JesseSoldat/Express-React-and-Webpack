@@ -3,12 +3,12 @@ var React = require('react');
 
 var Display = React.createClass({
 	display(){
-		console.log('display');
+		// console.log('display');
 		if (this.props.if) {
-			return <div>SHOW</div>
+			return <div>{this.props.children}</div>
 		} 
-		else {
-			return <div>HIDE</div>
+		else { 
+			return null
 		}
 	},
 	render() {

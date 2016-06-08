@@ -6,7 +6,11 @@ var Audience = React.createClass({
 
 		return (
 			<div>
-				<Display if={this.props.status === 'connected'}/>
+				<Display if={this.props.status === 'connected'}>
+					<h1>Join in the session</h1>
+				</Display>
+
+
 			</div>
 			);
 	}
