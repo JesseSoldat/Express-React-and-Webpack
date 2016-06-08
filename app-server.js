@@ -18,6 +18,10 @@ io.sockets.on('connection', function(socket){
 		console.log('Disconnected: %s sockets remaining ', connections.length);
 	});
 
+	socket.on('join', function(payload){
+		console.log(payload);
+	});
+
 	socket.emit('welcome', {
 		title: title
 	});

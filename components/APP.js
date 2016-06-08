@@ -17,7 +17,10 @@ var APP = React.createClass({
 		this.socket.on('disconnect', this.disconnect);
 		this.socket.on('welcome', this.welcome)
 	},
-	connect(){
+	emit(eventName, payload) {
+		this.socket.emit(eventName, payload);
+	},
+	connect(){ 
 		// console.log('Connected ' + this.socket.id);
 		this.setState({status: 'connected'});
 	},
@@ -38,7 +41,7 @@ var APP = React.createClass({
           			<li><Link to="/board" activeStyle={{ color: 'red' }}>Board</Link></li>
         		</ul>
         		
-        			{React.cloneElement(this.props.children, {title: this.state.title, status: this.state.status} )}
+        			{React.cloneElement(this.props.children, {title: this.state.title, status: this.state.status, emit: this.emit } )}
 			</div>
 			);
 	}
