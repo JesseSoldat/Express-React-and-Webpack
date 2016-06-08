@@ -9,6 +9,8 @@ var APP = require('./components/APP');
 var Audience = require('./components/audience');
 var Speaker = require('./components/speaker');
 var Board = require('./components/board');
+var notFound = require('./components/notFound');
+
 
 
 
@@ -19,6 +21,7 @@ ReactDom.render((
 	    <Route path="audience" component={Audience} />
 	    <Route path="speaker" component={Speaker} />
 	    <Route path="board" component={Board} />
+	    <Route path="*" component={notFound} />
     </Route>
 
 

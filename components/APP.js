@@ -31,14 +31,14 @@ var APP = React.createClass({
 	render() {
 		return (
 			<div>
-				<Header title={this.state.title} status={this.state.status} />
+				<Header  title={this.state.title} status={this.state.status} />
 				<ul role="nav">
           			<li><Link to="/audience" activeStyle={{ color: 'red' }}>Audience</Link></li>
           			<li><Link to="/speaker" activeStyle={{ color: 'red' }}>Speaker</Link></li>
           			<li><Link to="/board" activeStyle={{ color: 'red' }}>Board</Link></li>
         		</ul>
         		
-        			{React.cloneElement(this.props.children,{title: this.state.title, status: this.state.status})}
+        			{React.cloneElement(this.props.children, {title: this.state.title, status: this.state.status} )}
 			</div>
 			);
 	}
