@@ -15,6 +15,7 @@ var Board = require('./components/board');
 ReactDom.render((
   <Router history={hashHistory}>
     <Route path="/" component={APP}>
+	    <IndexRoute component={Audience} />
 	    <Route path="audience" component={Audience} />
 	    <Route path="speaker" component={Speaker} />
 	    <Route path="board" component={Board} />

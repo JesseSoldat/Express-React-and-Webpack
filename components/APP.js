@@ -33,11 +33,12 @@ var APP = React.createClass({
 			<div>
 				<Header title={this.state.title} status={this.state.status} />
 				<ul role="nav">
-          			<li><Link to="/audience">Audience</Link></li>
-          			<li><Link to="/speaker">Repos</Link></li>
-          			<li><Link to="/board">Repos</Link></li>
+          			<li><Link to="/audience" activeStyle={{ color: 'red' }}>Audience</Link></li>
+          			<li><Link to="/speaker" activeStyle={{ color: 'red' }}>Speaker</Link></li>
+          			<li><Link to="/board" activeStyle={{ color: 'red' }}>Board</Link></li>
         		</ul>
-        		{this.props.children}
+        		
+        			{React.cloneElement(this.props.children,{title: this.state.title, status: this.state.status})}
 			</div>
 			);
 	}
